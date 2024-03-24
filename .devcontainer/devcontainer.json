@@ -1,0 +1,27 @@
+{
+    "name": "Kotlin + Spring Boot with Gradle",
+    "dockerComposeFile": "../docker-compose.yml",
+    "service": "app",
+    "workspaceFolder": "/app",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.shell.linux": "/bin/bash"
+            },
+            "extensions": [
+                "vscjava.vscode-java-pack",
+                "naco-siren.gradle-language",
+                "vscjava.vscode-gradle",
+                "ms-azuretools.vscode-docker",
+                "mathiasfrohlich.Kotlin"
+            ]
+        }
+    },
+    "forwardPorts": [
+        8080
+    ],
+    // "postCreateCommand": "./gradlew bootRun",
+    "shutdownAction": "stopCompose",
+    "remoteUser": "devuser",
+    "overrideCommand": true
+}
